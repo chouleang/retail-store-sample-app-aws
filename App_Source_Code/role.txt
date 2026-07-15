@@ -1,0 +1,26 @@
+{
+    "Role": {
+        "Path": "/",
+        "RoleName": "github-actions-oidc-role-ui",
+        "RoleId": "AROARTSLLY5F6C2XX3K3P",
+        "Arn": "arn:aws:iam::110753466187:role/github-actions-oidc-role-ui",
+        "CreateDate": "2026-07-15T03:18:17+00:00",
+        "AssumeRolePolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Principal": {
+                        "Federated": "arn:aws:iam::110753466187:oidc-provider/token.actions.githubusercontent.com"
+                    },
+                    "Action": "sts:AssumeRoleWithWebIdentity",
+                    "Condition": {
+                        "StringLike": {
+                            "token.actions.githubusercontent.com:sub": "repo:chouleang/retail-store-sample-app-aws:*"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

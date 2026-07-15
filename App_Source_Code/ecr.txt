@@ -1,0 +1,16 @@
+{
+    "repository": {
+        "repositoryArn": "arn:aws:ecr:us-east-1:110753466187:repository/retails-ui",
+        "registryId": "110753466187",
+        "repositoryName": "retails-ui",
+        "repositoryUri": "110753466187.dkr.ecr.us-east-1.amazonaws.com/retails-ui",
+        "createdAt": "2026-07-15T10:08:14.830000+07:00",
+        "imageTagMutability": "MUTABLE",
+        "imageScanningConfiguration": {
+            "scanOnPush": true
+        },
+        "encryptionConfiguration": {
+            "encryptionType": "AES256"
+        }
+    }
+}
