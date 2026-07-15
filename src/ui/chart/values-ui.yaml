@@ -44,8 +44,8 @@ ingress:
   hosts: 
     - host: retails.qwerfvcxza.site
       paths: 
-	- path: /
-	  pathType: Prefix
+      - path: /
+        pathType: Prefix
 
 # ----------------------------------------------------------------------------
 # RESOURCE MANAGEMENT
