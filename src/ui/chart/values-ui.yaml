@@ -36,9 +36,16 @@ ingress:
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/healthcheck-path: /actuator/health/liveness
     # External DNS Annotation
-    external-dns.alpha.kubernetes.io/hostname: retailstore1.stacksimplify.com
-  tls: []
-  hosts: []
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80},{"HTTPS":443}]'
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:110753466187:certificate/ac3afd55-cdd6-4d15-9785-c0ae0cca0fda
+    alb.ingress.kubernetes.io/ssl-redirect: '443'
+    external-dns.alpha.kubernetes.io/hostname: retails.qwerfvcxza.site
+  #tls: []
+  hosts: 
+    - host: retails.qwerfvcxza.site
+      paths: 
+	- path: /
+	  pathType: Prefix
 
 # ----------------------------------------------------------------------------
 # RESOURCE MANAGEMENT
